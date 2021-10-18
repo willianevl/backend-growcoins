@@ -1,0 +1,2 @@
+DELETE   http://localhost:8080/signin/7cb6e620-0040-47ba-b69a-c22056a808f8 HTTP/1.1
+content-type: application/json

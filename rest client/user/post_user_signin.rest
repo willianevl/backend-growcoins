@@ -1,0 +1,14 @@
+POST http://localhost:8080/users HTTP/1.1
+content-type: application/json
+
+{
+            "name": "Willian Evaldt Guimaraes",
+            "email": "willianevaldt@gmail.com",
+            "password": "1212121",
+            "confirmPassword": "1212121",
+            "programName": "Starter",
+            "edition": "01",
+            "userImage": "something",
+            "programUid": "4af1033f-ab58-4361-9b46-ebcbed54ff2a"
+}
+
