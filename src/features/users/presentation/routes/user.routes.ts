@@ -3,6 +3,7 @@ import { UserController, UserMiddleware } from "..";
 import { CryptographyAdapter } from "../../../../core/infra";
 import { EMvc, middlewareAdapter, MvcController, routerMvcAdapter } from "../../../../core/presentation";
 import { UserRepository } from "../../infra";
+import upload from "../../infra/multer/multer";
 
 const makeController = (): MvcController => {
     const cryptography = new CryptographyAdapter(12);
@@ -13,7 +14,7 @@ const makeController = (): MvcController => {
 export class UserRoutes {
     public init(routes: Router): Router {
 
-        routes.post("/users", middlewareAdapter(new UserMiddleware()),
+        routes.post("/users", upload.single('userImage'), middlewareAdapter(new UserMiddleware()),
         routerMvcAdapter(makeController(), EMvc.STORE));
 
         routes.get('/users/program/:programUid', routerMvcAdapter(makeController(), EMvc.INDEX));

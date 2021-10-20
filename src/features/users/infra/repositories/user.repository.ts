@@ -67,8 +67,16 @@ export class UserRepository {
     async update(uid: string, params: User): Promise<User> {
         const { name, email, password, confirmPassword, programName, edition, userImage, programUid } = params;
 
+        const passwordHash = await this.#cryptography.hash(password);
+
         const user = await UserEntity.update(uid, {
-            name, email, password, programName, edition, userImage, programUid
+            name,
+            email,
+            password: passwordHash,
+            programName,
+            edition,
+            userImage,
+            programUid
         });
 
         return Object.assign({}, params, user);

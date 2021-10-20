@@ -16,7 +16,6 @@ export class ProgramRepository {
 
     async getProgram(edition: string, name: string): Promise<Program | undefined> {
         const program = await ProgramEntity.findOne({ edition: edition } && { name: name });
-        console.log(program)
 
         if(!program) return undefined;
 

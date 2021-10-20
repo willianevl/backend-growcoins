@@ -32,7 +32,6 @@ export default class AuthController {
       token: jwt.sign(
       {
         uuid: user.uid,
-        teste: "jwt",
       },
       authConfig.secret!,
       {
