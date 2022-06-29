@@ -1,4 +1,4 @@
-# SÓ MANDA PARA MASTER SE ESTIVER FUNCIONANDO HAHA
+# SÓ MANDA PARA MASTER SE ESTIVER FUNCIONANDO
 
 ## BackEnd Projeto GrowDevCoins
 
@@ -26,8 +26,8 @@ git merge  feat/nome-da-feat-que-vc-quer
 ## BackEnd Node
 
 - Arquitetura
-- Redis (se os outros estivere ok)
+- Redis (se os outros estiverem ok)
 - Postgree
 - TypeScript
 - TypeORM
-- Jest (se os outros estivere ok)
+- Jest (se os outros estiverem ok)
